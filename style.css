@@ -1,0 +1,118 @@
+
+.nav-bar {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    background-color: #050388;
+    padding: 1em;
+}
+
+.nav-bar li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Banner */
+.hero-banner {
+    text-align: center;
+    background-color: #007fb5;
+    padding: 2em;
+}
+
+/* Flexbox Sections */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.intro, .sidebar {
+    flex: 1;
+    margin: 1em;
+}
+
+/* Service Cards */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 2em;
+}
+
+.service-card {
+    padding: 1em;
+    border: 1px solid #833ebe;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 2em;
+}
+
+.contact-form input, 
+.contact-form textarea, 
+.contact-form button {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #1765da;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0c57cf;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .nav-bar li {
+        margin-bottom: 1em;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-banner {
+    animation: fadeIn 2s ease-in-out;
+}
